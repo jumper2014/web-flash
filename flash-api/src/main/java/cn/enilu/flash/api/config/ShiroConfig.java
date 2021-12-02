@@ -79,6 +79,11 @@ public class ShiroConfig {
         filterRuleMap.put("/file/getImgBase64", "anon");
 
         filterRuleMap.put("/test/**", "anon");
+        //  测试工具的路径权限从这里开始
+        filterRuleMap.put("/tool/**", "anon");
+        filterRuleMap.put("/merchant/**", "anon");
+        filterRuleMap.put("/pb/**", "anon");
+        filterRuleMap.put("/aps/**", "anon");
 
         //工作流定义文件流
         filterRuleMap.put("/workflow/process/definition/getDefinitionXML","anon");

@@ -17,7 +17,7 @@
         <evo-inflector-version>1.0.1</evo-inflector-version>
         <velocity-version>1.7</velocity-version>
         <commons-cli-version>1.2</commons-cli-version>
-        <spring.boot.version>2.1.1.RELEASE</spring.boot.version>
+        <spring.boot.version>2.3.11.RELEASE</spring.boot.version>
     </properties>
 
     <dependencies>

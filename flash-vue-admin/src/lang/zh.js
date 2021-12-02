@@ -32,6 +32,11 @@ export default {
     processDefinition: '流程定义',
     workFlowRequest: '申请列表',
     workFlowTask: '待办任务',
+    tool: '测试工具',
+    aps: 'APS工具',
+    merchant: "Merchant导入",
+    merchanttable: "Merchant分表",
+    portalbase: 'PortalBase工具',
 
   },
   navbar: {

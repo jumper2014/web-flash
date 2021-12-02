@@ -12,7 +12,6 @@
         <module>flash-api</module>
         <module>flash-core</module>
         <module>flash-generator</module>
-        <module>flash-workflow</module>
     </modules>
 
     <properties>
@@ -76,6 +75,18 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>1.1.13</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.47</version>
             </dependency>
 
             <dependency>

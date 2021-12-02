@@ -4,7 +4,6 @@ import cn.enilu.flash.dao.BaseRepositoryFactoryBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -31,8 +30,7 @@ import java.net.UnknownHostException;
 @SpringBootApplication(
         //集成activit后，默认引入了springSecurity，这里需要通过下面配置去掉SpringSecurity
         exclude = {
-                SecurityAutoConfiguration.class,
-                ManagementWebSecurityAutoConfiguration.class
+                SecurityAutoConfiguration.class
         }
 )
 @ComponentScan(basePackages = "cn.enilu.flash")

@@ -30,7 +30,12 @@ export default {
     workFlow: 'Work Flow',
     processDefinition: 'Process Definition',
     workFlowRequest: 'Process Instance',
-    workFlowTask: 'My Tasks'
+    workFlowTask: 'My Tasks',
+    tool: 'Tool',
+    aps: 'APS',
+    merchant: 'Merchant Import',
+    portalbase: 'Portal base',
+    merchanttable: 'Merchant Table',
   },
   navbar: {
     logOut: 'Log Out',

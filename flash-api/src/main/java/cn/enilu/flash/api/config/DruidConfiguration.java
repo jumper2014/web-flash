@@ -11,9 +11,10 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
-
 import javax.sql.DataSource;
+import java.util.Map;
 
 /**
  * descript
@@ -24,7 +25,6 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-
 public class DruidConfiguration {
     @Autowired
     private Environment env;
@@ -56,10 +56,27 @@ public class DruidConfiguration {
         return filterRegistrationBean;
     }
 
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource druid(){
+    @Bean("webflash")
+    @ConfigurationProperties(prefix = "spring.datasource.webflash")
+    public DataSource webflash(){
         return new DruidDataSource();
     }
 
+    @Bean("test")
+    @ConfigurationProperties(prefix = "spring.datasource.test")
+    public DataSource test(){
+        return new DruidDataSource();
+    }
+
+    @Bean("aps")
+    @ConfigurationProperties(prefix = "spring.datasource.aps")
+    public DataSource aps(){
+        return new DruidDataSource();
+    }
+
+    @Bean
+    @Primary
+    public DataSource dataSource(@Autowired Map<String, DataSource> datasourceMap) {
+        return new DynamicDatasource(datasourceMap);
+    }
 }
